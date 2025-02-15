@@ -22,6 +22,8 @@ The main reasons for this are given below:
 
 10. Multiple inheritance should be avoided because it makes code complex. Code reuse can be done in C also.
 
-11. So, actually there is not enough reason to use C++ in networking software. In networking software, most of the features of C++ are not used. The only feature that's used is the C++ class to wrap the C code. But then there is no point in using C++. C code base can be managed well by having reviews of code by 3-4 peer developers and the team lead before it is checked in.
+11. If you want to make your variable/function private in C (just like by using private keyword in C++) then you can declare your variable/function as static and then that variable/function will not be visible outside of that file.
 
-12. So, my opinion is that networking software should not be written in C++ but it should be written in C.
+12. So, actually there is not enough reason to use C++ in networking software. In networking software, most of the features of C++ are not used. The only feature that's used is the C++ class to wrap the C code. But then there is no point in using C++. C code base can be managed well by having reviews of code by 3-4 peer developers and the team lead before it is checked in.
+
+13. So, my opinion is that networking software should not be written in C++ but it should be written in C.
