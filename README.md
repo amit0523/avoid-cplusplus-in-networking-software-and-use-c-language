@@ -18,7 +18,7 @@ The main reasons for this are given below:
 
 8. There is no need (or not much need) of handling files in networking software.
 
-9. Operator overloading in C++ makes code difficult to read, so it should be avoided.
+9. Operator overloading in C++ makes code difficult to understand (you have to look at the implemented code of the overloaded operator to see what exactly is it doing), so operator overloading should be avoided. Besides, operator overloading changes the semantics of the code. So, if there is a line of code such as ```obj = obj1 + obj2;``` then you actually don't know what's happening. You will have to look at the implemented code of the overloaded operator ('+') to understand exactly what is happening. And if different classes overload the '+' operator differently then you won't remember which '+' is doing what. So, it is best to avoid operator overloading.
 
 10. Multiple inheritance should be avoided because it makes code complex. Code reuse can be done in C also.
 
