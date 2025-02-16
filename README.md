@@ -14,7 +14,7 @@ The main reasons for this are given below:
 
 6. There is no need of C++ string class in networking software because in networking software, we deal with bytes and not strings.
 
-7. Now, C++ supporters will say that code can be managed better in C++ because the code and the data live together in a class. Even C code can be managed well. Linux kernel has around 30 million lines of code and it is all in C and it is managed well. So, large C code bases can be managed well. I have mostly worked in the networking domain and I have used only C (and no C++) and the total lines of code were in hundreds of thousands, even then the code base was managed well. In a company, it is not that any developer can write/change any code and check it in, first the code has to go through reviews (by 3-4 peer developers and the team lead) and then some testing and only then it will be allowed to be checked in, so C code base can be managed well.
+7. Now, C++ supporters will say that code can be managed better in C++ because the code and the data live together in a class. Even C code can be managed well. Linux kernel has around 30 million lines of code and it is all in C and it is managed well. So, large C code bases can be managed well. I have worked mostly in the networking domain and I have used only C (and no C++) and the total lines of code were in hundreds of thousands, and even then the code base was managed well. In a company, it is not that any developer can write/change any C code and check it in, but actually the code goes through reviews (by 3-4 team members and the team lead) and then some testing and only then it is allowed to be checked in. So, C code base can be managed well.
 
 8. There is no need (or not much need) of handling files in networking software.
 
@@ -89,6 +89,6 @@ no point in picking C++ over C from the security point of view.
 
 13. In most of the networking software multi-threading is required. Posix threads in C are easy to use. I detach the thread after creating it by using pthread_detach() so that I don't have to do pthread_join().
 
-14. So, actually there is not enough reason to use C++ in networking software. In networking software, most of the features of C++ are not used. The only feature that's used is the C++ class to wrap the C code. But then there is no point in using C++. C code base can be managed well by having reviews of code by 3-4 peer developers and the team lead and then some testing before it is checked in.
+14. So, actually there is not enough reason to use C++ in networking software. In networking software, most of the features of C++ are not used. The only feature that's used is the C++ class to wrap the C code. But then there is no point in using C++. C code base can be managed well by having reviews of code by 3-4 team members and the team lead and then some testing before it is checked in.
 
 15. So, my opinion is that networking software should not be written in C++ but it should be written in C.
