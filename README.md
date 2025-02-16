@@ -24,8 +24,69 @@ The main reasons for this are given below:
 
 11. If you want to make your variable/function private in C (just like by using private keyword in C++) then you can declare your variable/function as static and then that variable/function will not be visible outside of that file.
 
-12. In most of the networking software multi-threading is required. Posix threads in C are easy to use. I detach the thread after creating it by using pthread_detach() so that I don't have to do pthread_join().
+12. C++ has a big flaw. You can change private member variables directly by getting the pointer to the object. So, private member variables are actually not private. Below is the example code:
+```
 
-13. So, actually there is not enough reason to use C++ in networking software. In networking software, most of the features of C++ are not used. The only feature that's used is the C++ class to wrap the C code. But then there is no point in using C++. C code base can be managed well by having reviews of code by 3-4 peer developers and the team lead and then some testing before it is checked in.
+#include <iostream>
 
-14. So, my opinion is that networking software should not be written in C++ but it should be written in C.
+using namespace std;
+
+class MyClass
+{
+
+private:
+    int i;
+    int j;
+
+public:
+    MyClass(int a, int b)
+    {
+        i = a;
+        j = b;
+    }
+
+    void print_data()
+    {
+        cout << endl;
+        cout << "i = " << i << ", j = " << j;
+    }
+
+}; // end of class MyClass
+
+int main(void)
+{
+
+    MyClass myobj(1, 4);
+
+    myobj.print_data();
+
+    MyClass *m = &myobj;
+    
+    int *i_ptr = (int *)(m);
+    int *j_ptr = i_ptr + 1;
+
+    *i_ptr = 10;
+    *j_ptr = 20;
+
+    myobj.print_data();
+
+    cout << endl << endl;
+
+    return 0;
+
+} // end of function main()
+
+The output is:
+
+i = 1, j = 4
+i = 10, j = 20
+
+So, you see that the private member variables values were changed directly using pointers.
+
+```
+
+13. In most of the networking software multi-threading is required. Posix threads in C are easy to use. I detach the thread after creating it by using pthread_detach() so that I don't have to do pthread_join().
+
+14. So, actually there is not enough reason to use C++ in networking software. In networking software, most of the features of C++ are not used. The only feature that's used is the C++ class to wrap the C code. But then there is no point in using C++. C code base can be managed well by having reviews of code by 3-4 peer developers and the team lead and then some testing before it is checked in.
+
+15. So, my opinion is that networking software should not be written in C++ but it should be written in C.
