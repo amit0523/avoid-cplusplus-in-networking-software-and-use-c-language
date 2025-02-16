@@ -24,7 +24,7 @@ The main reasons for this are given below:
 
 11. If you want to make your variable/function private in C (just like by using private keyword in C++) then you can declare your variable/function as static and then that variable/function will not be visible outside of that file.
 
-12. C++ has a big flaw. You can change private member variables directly by getting the pointer to the object. So, private member variables are actually not private. Below is the example code:
+12. C++ has a big flaw. You can change the values of private member variables directly by getting the pointer to the object. So, private member variables are actually not private. Below is the example code:
 ```
 
 #include <iostream>
