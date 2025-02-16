@@ -14,7 +14,7 @@ The main reasons for this are given below:
 
 6. There is no need of C++ string class in networking software because in networking software, we deal with bytes and not strings.
 
-7. Now, C++ supportes will say that code can be managed better in C++ becuase the code and the data live together in a class. Even C code can be managed well. Linux kernel has around 30 million lines of code and it is all in C and it is managed well. So, large C code base can be managed well. I have mostly worked in networking domain and I have used only C (and no C++) and the total lines of code were in hundreds of thousands, even then the code base was managed well. In a company, its not that any developer can write/change any code and check it in, first the code has to go through reviews (by 3-4 peer developers and the team lead) and then some testing and only then it will be allowed to be checked in, so C code base can be managed well.
+7. Now, C++ supporters will say that code can be managed better in C++ because the code and the data live together in a class. Even C code can be managed well. Linux kernel has around 30 million lines of code and it is all in C and it is managed well. So, large C code bases can be managed well. I have mostly worked in the networking domain and I have used only C (and no C++) and the total lines of code were in hundreds of thousands, even then the code base was managed well. In a company, it is not that any developer can write/change any code and check it in, first the code has to go through reviews (by 3-4 peer developers and the team lead) and then some testing and only then it will be allowed to be checked in, so C code base can be managed well.
 
 8. There is no need (or not much need) of handling files in networking software.
 
@@ -24,6 +24,6 @@ The main reasons for this are given below:
 
 11. If you want to make your variable/function private in C (just like by using private keyword in C++) then you can declare your variable/function as static and then that variable/function will not be visible outside of that file.
 
-12. So, actually there is not enough reason to use C++ in networking software. In networking software, most of the features of C++ are not used. The only feature that's used is the C++ class to wrap the C code. But then there is no point in using C++. C code base can be managed well by having reviews of code by 3-4 peer developers and the team lead and some testing before it is checked in.
+12. So, actually there is not enough reason to use C++ in networking software. In networking software, most of the features of C++ are not used. The only feature that's used is the C++ class to wrap the C code. But then there is no point in using C++. C code base can be managed well by having reviews of code by 3-4 peer developers and the team lead and then some testing before it is checked in.
 
 13. So, my opinion is that networking software should not be written in C++ but it should be written in C.
