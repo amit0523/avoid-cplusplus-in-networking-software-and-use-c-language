@@ -82,8 +82,8 @@ i = 1, j = 4
 i = 10, j = 20
 
 So, you see that the private member variables values were changed directly using pointers.
-So, C++ is not a secure language. Although, C is also not a secure language but there is no point
-in picking C++ over C from the security point of view.
+So, C++ is not a secure language. Although, C is also not a secure language but there is
+no point in picking C++ over C from the security point of view.
 
 ```
 
