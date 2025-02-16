@@ -1,4 +1,4 @@
-You should avoid C++ if you are developing networking software (like protocols, socket programming, etc.).
+You should avoid C++ if you are developing networking software (like - protocols, socket programs, etc.).
 
 The main reasons for this are given below:
 
