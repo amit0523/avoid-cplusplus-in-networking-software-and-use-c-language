@@ -24,7 +24,7 @@ The main reasons for this are given below:
 
 11. If you want to make your variable/function private in C (just like by using private keyword in C++) then you can declare your variable/function as static and then that variable/function will not be visible outside of that file.
 
-12. C++ has a big security hole. You can change the values of the private member variables directly by getting the pointer to the object. So, private member variables are actually not private, they are public. There is no point in picking C++ over C from the security point of view. Below is the example code:
+12. C++ has a big flaw. You can change the values of the private member variables directly by getting the pointer to the object. So, private member variables are actually not private, they are public. Below is the example code:
 ```
 
 #include <iostream>
@@ -83,8 +83,6 @@ i = 10, j = 20
 
 So, you see that the values of the private member variables ('i' and 'j') were changed
 directly by using pointers. So, the 'private' keyword actually didn't serve its purpose.
-So, C++ is not a secure language. Although, C is also not a secure language but
-there is no point in picking C++ over C from the security point of view.
 
 ```
 
