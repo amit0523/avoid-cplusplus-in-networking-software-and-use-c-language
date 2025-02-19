@@ -1,3 +1,12 @@
+
+/*
+ * License: This file has been released under GNU General Public License,
+ *          version 2 (GPLv2).
+ *
+ * The license details can be found here:
+ *                  https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+ */
+
 You should avoid C++ if you are developing networking software (like - protocols, socket programs, etc.).
 
 The main reasons for this are given below:
