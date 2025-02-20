@@ -13,7 +13,7 @@ The main reasons for this are given below:
 
 5. I had worked on two projects in C++ but actually that was not true C++. They just wrote C code in C++ classes. So, they mostly just used the class feature of C++, the rest was C code. They did some operator overloading but that made the code a little difficult to read. So, then why to use C++ just to write C code in C++ classes? Why not simply use C language and write C code?
 
-6. There is no need of C++ string class in networking software because in networking software, we deal with bytes and not strings.
+6. There is no need of C++ string class in networking software because, in networking software, we deal with bytes and not strings.
 
 7. Now, C++ supporters will say that the code can be managed better in C++ than in C because in C++ the code/functions and the data live together in a class. Even C code can be managed well. Linux kernel has around 30 million lines of code and it is all in C and it is managed well. So, large C code bases can be managed well. I have worked mostly in the networking domain and I have used only C (and no C++) and the total lines of code were in hundreds of thousands, and even then the code base was managed well. In a company, it is not that any developer can write/change any C code and check it in, but actually the code goes through reviews (by 3-4 team members and the team lead) and then some testing and only then it is allowed to be checked in. So, C code base can be managed well.
 
