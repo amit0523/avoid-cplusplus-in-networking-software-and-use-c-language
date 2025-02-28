@@ -62,8 +62,9 @@ int main(void)
     myobj.print_data();
 
     MyClass *m = &myobj;
-    
-    int *i_ptr = (int *)(m);
+
+    //int *i_ptr = (int *)(m); // this works too
+    int *i_ptr = reinterpret_cast <int *>(m);
     int *j_ptr = i_ptr + 1;
 
     *i_ptr = 10;
