@@ -1,4 +1,9 @@
 
+/*
+ * Author: Amit Choudhary
+ * Email: amitchoudhary0523 AT gmail DOT com
+ */
+
 You should avoid C++ if you are developing networking software (like - protocols, socket programs, etc.).
 
 The main reasons for this are given below:
